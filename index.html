@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Al-Khashbah 2016</title>    
+        
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<link rel="icon" href="assets/uni-tuebingen.ico" type="image/vnd.microsoft.icon" />
+		
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.4.0/Control.MiniMap.min.css" />
+		
+		<link rel="stylesheet" href="css/custom.css" />
+		<link rel="stylesheet" href="css/glisse.css" />
+		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/i18n/de.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.4.0/Control.MiniMap.min.js"></script>
+		
+		<script src="data/funde.js"></script>
+		<script src="data/fotos.js"></script>
+		<script src="data/fein_stat.js"></script>
+		<script src="data/grob_stat.js"></script>		
+		<script src="data/filters.js"></script>
+		<script src="js/globals.js"></script>
+		<script src="js/custom.js"></script>      
+		<script src="js/glisse.js"></script>
+		<script src="js/controls.js"></script>
+    </head>
+    <body class='wait loading'>
+		<div id='busy'>Lade Karte</div>
+		
+		<div id='no-show'>Setzen Sie einen Filter, um Funde auf der Karte zu sehen.</div>
+		
+		<div id="logo">
+			<a href="http://escience.uni-tuebingen.de" target="_blank">
+				<img src="assets/escience-logo-transparent.svg">
+			</a>
+		</div>
+		
+		<div id='container'>			
+			<div id='map'></div>
+			
+			<div id='cockpit'>
+				<div class='title'>Al-Khashbah Survey 2015</div>
+				<div class='subtitle'><a target="_blank" href='http://www.uni-tuebingen.de/de/69386'>Homepage des Projekts</a></div>
+				
+				<div class='section-head'>Filter</div>				
+				<div id='marker-count'></div>
+				<div id='filter'>
+					<div>
+						<select id='filter-bereich'></select>						
+					</div>					
+					<div>
+						<select id='filter-matgr'></select>						
+					</div>
+					<div>
+						<select id='filter-objekt'></select>						
+					</div>
+					<div>
+						<select id='filter-ware'></select>						
+					</div>
+					<div>
+						<select id='filter-datierung'></select>						
+					</div>
+					<div>
+						<select id='filter-fundnr'></select>						
+					</div>
+					<div>
+						<label><input type='checkbox' id='zoom-to-filter' checked='checked' /> Kartenausschnitt an gefilterte Funde anpassen</label>
+					</div>
+				</div>
+				
+				<div id='details-box'>
+					<div class='section-head'>Funddetails</div>
+					<div id='details'></div>
+				</div>
+				
+				<div id="fotos-box">
+					<div class='section-head'>Fotos</div>
+					<div id='fotos'></div>
+				</div>
+				
+				<div id="galerie-box">
+					<div class='section-head'>Fotogalerie</div>
+					<div id='galerie'></div>
+				</div>
+			</div>
+		</div>
+	</body>		
+</html>
