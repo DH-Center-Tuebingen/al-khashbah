@@ -69,10 +69,14 @@ function initialize_map() {
 
 	L.tileLayer(basemap_info.url_template, basemap_info.options).addTo(map);
 
-	var sn33 = true;
+	var imagery = {
+		sn33_jpg: 'al-kashbah_a-h',
+		local_jpg: 'al-kashbah_ortho_a-h',
+		sn33_lzw: 'ortho'
+	};
 	L.tileLayer.wms("https://escience-center.uni-tuebingen.de/geoserver/Al-Kashbah/wms", {
 		maxZoom: basemap_info.options.maxZoom,
-		layers: sn33? 'al-kashbah_a-h' : 'al-kashbah_ortho_a-h',
+		layers: imagery.sn33_lzw,
 		format: 'image/png',
 		transparent: true,
 		version: '1.1.1'
